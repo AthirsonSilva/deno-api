@@ -1,8 +1,8 @@
 import beerRepository from '../repositories/beerRepository.js'
-import { getBeerDetails } from './getBeerDetailsService.js'
+import { getBeerById } from './getBeerByIdService.js'
 
 export const updateBeer = async (beerId, beerData) => {
-	const beer = await getBeerDetails(beerId)
+	const beer = await getBeerById(beerId)
 
 	if (Object.keys(beer).length === 0 && beer.constructor === Object) {
 		throw new Error('Beer not found')

@@ -1,4 +1,4 @@
-import { getBeerDetails } from '../services/getBeerDetailsService.js'
+import { getBeerById } from '../services/getBeerByIdService.js'
 
 export default async ({ params, response }) => {
 	const beerId = params.id
@@ -9,7 +9,7 @@ export default async ({ params, response }) => {
 		return
 	}
 
-	const foundBeer = await getBeerDetails(beerId)
+	const foundBeer = await getBeerById(beerId)
 
 	if (!foundBeer) {
 		response.status = 404

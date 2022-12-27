@@ -1,6 +1,6 @@
 import beerRepository from '../repositories/beerRepository.js'
 
-export const getBeerDetails = async (beerId) => {
+export const getBeerById = async (beerId) => {
 	const beer = await beerRepository.selectById(beerId)
 
 	if (!beer || beer?.length === 0) throw new Error('Beer not found')
