@@ -1,7 +1,7 @@
 import { Application } from 'https://deno.land/x/oak/mod.ts'
 import { APP_HOST, APP_PORT } from './config.js'
 import _404 from './controllers/404.js'
-import errorHandler from './controllers/errorHandler.js'
+import errorHandler from './controllers/errorHandlerController.js'
 import router from './routes.js'
 
 const app = new Application()
