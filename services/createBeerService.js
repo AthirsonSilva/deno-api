@@ -1,4 +1,4 @@
-import beerRepository from '../repositories/beerRepository'
+import beerRepository from '../repositories/beerRepository.js'
 
 export const createBeer = async (beerData) => {
 	const { name, brand, is_premium } = beerData

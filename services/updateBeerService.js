@@ -1,5 +1,5 @@
-import beerRepository from '../repositories/beerRepository'
-import { getBeerDetails } from './getBeerDetailsService'
+import beerRepository from '../repositories/beerRepository.js'
+import { getBeerDetails } from './getBeerDetailsService.js'
 
 export const updateBeer = async (beerId, beerData) => {
 	const beer = await getBeerDetails(beerId)
@@ -10,7 +10,7 @@ export const updateBeer = async (beerId, beerData) => {
 
 	const updatedBeer = { ...beer, ...beerData }
 
-	beerRepository.update(beerId, updatedBeer)
+	beerRepository.update(beer.id, updatedBeer)
 
 	return updatedBeer
 }

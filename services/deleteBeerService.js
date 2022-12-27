@@ -1,4 +1,4 @@
-import beerRepository from '../repositories/beerRepository'
+import beerRepository from '../repositories/beerRepository.js'
 
 export const deleteBeer = async (beerId) => {
 	if (!beerId) throw new Error('Missing beer id')

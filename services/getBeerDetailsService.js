@@ -1,4 +1,4 @@
-import beerRepository from '../repositories/beerRepository'
+import beerRepository from '../repositories/beerRepository.js'
 
 export const getBeerDetails = async (beerId) => {
 	const beer = await beerRepository.selectById(beerId)

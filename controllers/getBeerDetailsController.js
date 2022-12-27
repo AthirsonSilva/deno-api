@@ -1,4 +1,4 @@
-import { getBeerDetails } from '../services/getBeerDetailsService'
+import { getBeerDetails } from '../services/getBeerDetailsService.js'
 
 export default async ({ params, response }) => {
 	const beerId = params.id

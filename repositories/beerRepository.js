@@ -13,9 +13,9 @@ class BeerRepository {
 		return client.queryArray`SELECT * FROM beers WHERE id = ${id}`
 	}
 
-	update(id, beer) {
+	async update(id, beer) {
 		const latestBeer = this.selectById(id)
-		const { name, brand, is_premium } = latestBeer
+		const { name, brand, is_premium } = await beer
 
 		return client.queryArray`UPDATE beers SET name = ${
 			name !== undefined ? name : latestBeer.name
@@ -31,4 +31,6 @@ class BeerRepository {
 	}
 }
 
-export default new BeerRepository()
+const beerRepository = new BeerRepository()
+
+export default beerRepository
